@@ -3,12 +3,12 @@ const itineraryData = [
     day: 1,
     date: "2025-07-03",
     title: "Gyeongju — Arrival & Tomb Complex",
-    distance: "~380km (KTX from Incheon/Seoul)",
-    time: "~2h15m transit",
+    distance: "~380km (Airport Limousine Bus)",
+    time: "~2h45m transit",
     sights: "<b>Daereungwon Tomb Complex (대릉원).</b><br><br>The 23 massive grass tumuli of the Silla kingdom. These are not ruins but smooth, intact mounds, each 12–22m high, rising from the suburban streetscape. The interior of Cheonmachong (천마총) is open to visitors — a royal tomb filled with extraordinary gold artifacts discovered in 1973. Walk the full perimeter (approx. 1–1.5 hrs). Very flat, very relaxing.<br><br><b>Hwangridan-gil Street (황리단길).</b> The commercial alley just east of the tombs has good coffee shops and hanok-style boutiques. Great for late afternoon wandering at your own pace.<br><br><b>Donggung Palace & Wolji Pond (동궁과 월지).</b> The ancient royal retreat beautifully illuminated across the water. Spectacular at night — a 10–15 min walk from Hwangridan-gil. Free entry.",
     accommodation: "Gyeongju Hanok Guesthouse (e.g., Gyeongju Ran Hanok or similar). Traditional hanok compound with ondol rooms, steps from Daereungwon.<br><a href='https://www.trip.com/' target='_blank'>Trip.com Booking</a>",
-    food: "<b>Lunch:</b> Bento box or snacks at Seoul Station for the train.<br><b>Dinner:</b> Hwangnam-ppang (황남빵) at Choi Yeonghwa Ppang — the original red bean bun shop. Buy warm ones to eat while walking.",
-    practical: "Get a T-money card at Incheon Airport. Top up ₩50,000.<br>Flight lands ~10:00 AM. By the time you clear immigration, get bags, and take AREX to Seoul Station, it will be ~12:30 PM. Catch a 1:00–1:30 PM KTX, arriving Singyeongju Station around 3:30 PM.<br>Gyeongju has no subway. Use local city buses (Naver Maps handles Korean bus routing well) or taxis, which are inexpensive.<br>Daereungwon is only a 10–15-minute walk from most guesthouses in central Gyeongju.",
+    food: "<b>Lunch:</b> Grab snacks at Incheon Airport T1 departures or arrivals hall — there are plenty of options. Eat on the bus.<br><b>Dinner:</b> Hwangnam-ppang (황남빵) at Choi Yeonghwa Ppang — the original red bean bun shop. Buy warm ones to eat while walking.",
+    practical: "Get a T-money card at Incheon Airport. Top up ₩50,000.<br><b>Getting to Gyeongju by bus:</b> After clearing immigration and collecting bags, follow signs to 'Intercity Bus' at Incheon Airport Terminal 1. Take the free shuttle bus (shuttle runs every 10–15 min, ~5 min ride) to the Airport Intercity Bus Terminal (located between T1 and T2). Buy a ticket to 'Gyeongju' at the counter or self-service machine — look for '경주' (Gyeongju). Buses depart roughly every 30–60 min. The journey takes ~2h15m and costs ₩22,000–28,000. You can also buy tickets at the counter in English (bring your passport). The bus drops you at Gyeongju Express Bus Terminal — from there, take a taxi (~₩8,000–12,000, 15 min) to your guesthouse in central Gyeongju.<br>Alternative: AREX to Seoul Station + subway Line 2 to Express Bus Terminal (동서울터미널) + bus to Gyeongju. This is more complex with luggage but gives you flexibility on timing.<br>Gyeongju has no subway. Use local city buses (Naver Maps handles Korean bus routing well) or taxis, which are inexpensive.<br>Daereungwon is only a 10–15-minute walk from most guesthouses in central Gyeongju.",
     spots: [
       { name: "Incheon Airport (인천공항)", type: "waypoint", lat: 37.4602, lng: 126.4407 },
       { name: "Daereungwon Tomb Complex (대릉원)", type: "sight", lat: 35.8297, lng: 129.2264 },
@@ -22,14 +22,14 @@ const itineraryData = [
     day: 2,
     date: "2025-07-04",
     title: "Gyeongju → Busan — UNESCO Sites & Market Culture",
-    distance: "~70km (KTX)",
-    time: "2h transit",
+    distance: "~130km (Intercity Bus)",
+    time: "~2h transit",
     sights: "<b>Morning: Bulguksa Temple (불국사) & Seokguram Grotto (석굴암).</b><br><br>Start by 9:00am. Bus 10 or 11 out to Bulguksa Temple, then catch the shuttle up the mountain to Seokguram Grotto. Seokguram viewings are timed in slots of about 10 minutes each; peak July crowds mean waiting is likely. Go straight there.<br><br><b>Afternoon: Toyoko Inn Jungang Station check-in.</b><br><br><b>Jagalchi Market (자갈치시장).</b> Korea's largest seafood market. Walk the multi-level building, watch live fish and shellfish being sold, see the auction floor. You can have your selection cooked to order at restaurants on the upper floors.<br><br><b>BIFF Square (비프광장).</b> Historic square with street food, movie posters from the Busan International Film Festival. Try the ssiat hotteok (sweet seed-filled pancakes).",
     accommodation: "Toyoko Inn Busan Jungang Station (東京堂인釜山中央駅). Right on Line 1 subway station. Clean, reliable Japanese chain — no-frills but functional and well-located for transit.<br><a href='https://www.trip.com/' target='_blank'>Trip.com Booking</a>",
     food: "<b>Lunch:</b> Quick lunch in Gyeongju after Seokguram (~1:00 PM).<br><b>Dinner:</b> Ssiat hotteok (sweet seed-filled pancakes) at BIFF Square street stalls.",
-    practical: "KTX from Singyeongju to Busan takes only 30 minutes — one of the shortest intercity train journeys in Korea. Book via Korail.<br>Busan subway is excellent and covers all the main sites in Nampo-dong (2 stops from Jungang Station).<br>Toyoko Inn Jungang Station is directly on Line 1 — perfect for hopping to Jagalchi Market (5 min) or Busan Station for KTX.",
+    practical: "Bus from Gyeongju to Busan: Take a local bus or taxi (~₩8,000–12,000, 15 min) from your guesthouse to Gyeongju Express Bus Terminal (경주터미널). Buy a ticket to 'Busan' (부산) — look for '부산종합버스터미널'. Buses run frequently, roughly every 30–60 min. Journey takes ~1h45m–2h and costs ₩10,000–15,000. The bus drops you at Busan Express Bus Terminal (동부산터미널 / Dong-Busan Terminal) — take subway Line 1 westbound toward Jagalchi (3 stops, ~8 min) to reach Toyoko Inn Jungang Station area.<br>Busan subway is excellent and covers all the main sites in Nampo-dong (2 stops from Jungang Station).<br>Toyoko Inn Jungang Station is directly on Line 1 — perfect for hopping to Jagalchi Market (5 min) or Busan Station for the intercity bus.",
     spots: [
-      { name: "Singyeongju Station (KTX departure)", type: "waypoint", lat: 35.8200, lng: 129.2100 },
+      { name: "Gyeongju Express Bus Terminal (경주터미널)", type: "waypoint", lat: 35.8300, lng: 129.2200 },
       { name: "Bulguksa Temple (불국사)", type: "sight", lat: 35.8082, lng: 129.3337 },
       { name: "Seokguram Grotto (석굴암)", type: "sight", lat: 35.8297, lng: 129.3460 },
       { name: "Jagalchi Market (자갈치시장)", type: "sight", lat: 35.1480, lng: 129.0600 },
@@ -40,18 +40,18 @@ const itineraryData = [
   {
     day: 3,
     date: "2025-07-05",
-    title: "Busan → Seoul — Coastal Leisure & SRT to COEX",
-    distance: "~450km (SRT)",
-    time: "Late-night transit (~7pm–9:30pm)",
-    sights: "<b>Morning: Haedong Yonggungsa Temple (해동용궁사).</b><br><br>One of the few temples in Korea built right on the coastline. The main hall sits on a rocky outcrop with waves crashing below — stunning views and peaceful atmosphere.<br><br><b>Afternoon: Haeundae Beach (해운대해수욕장).</b> Busan's most famous beach. Gentle coastal walk, refreshing dip if you dare (it's cold!). Crystal clear water in July.<br><br><b>Haeundae Sky Capsule.</b> Must be booked weeks in advance. A miniature capsule train that runs along the coast — unique photo opportunity.<br><br><b>Evening: SRT to Seoul.</b><br><br>Take a ~7:00 PM SRT from Busan to Suseo Station (arrive ~9:30 PM). Suseo is in Gangnam, just a 10-minute taxi ride to Grand Intercontinental COEX. Check in, drop bags, rest.",
+    title: "Busan → Seoul — Coastal Leisure & Evening Bus to COEX",
+    distance: "~380km (Intercity Bus)",
+    time: "~4h transit (~7pm–11pm)",
+    sights: "<b>Morning: Haedong Yonggungsa Temple (해동용궁사).</b><br><br>One of the few temples in Korea built right on the coastline. The main hall sits on a rocky outcrop with waves crashing below — stunning views and peaceful atmosphere.<br><br><b>Afternoon: Haeundae Beach (해운대해수욕장).</b> Busan's most famous beach. Gentle coastal walk, refreshing dip if you dare (it's cold!). Crystal clear water in July.<br><br><b>Haeundae Sky Capsule.</b> Must be booked weeks in advance. A miniature capsule train that runs along the coast — unique photo opportunity.<br><br><b>Evening: Intercity Bus to Seoul.</b><br><br>Your 7:00 PM bus from Busan to Seoul Express Bus Terminal (서울남부터미널 / Seoul Nambu Terminal). Arrive ~11:00 PM. From the terminal, take subway Line 3 (express) to COEX (Yeoksam Station, Line 2) — about 30 min. Or take a taxi (~₩25,000–35,000, 40 min) directly to Grand Intercontinental COEX.",
     accommodation: "Grand Intercontinental Seoul COEX (그랜드 인터컨티넨탈 서울 코엑스). Right at the conference venue. Ultra-convenient for ICML days.<br><a href='https://www.trip.com/' target='_blank'>Trip.com Booking</a>",
-    food: "<b>Lunch:</b> Haeundae Beach area — seafood restaurants along the coast.<br><b>Dinner:</b> Light meal at Busan Station or SRT onboard. COEX area for dinner after arrival.",
-    practical: "Check out of Toyoko Inn by 10:00 AM. Take the subway to Busan Station and lock your luggage in the coin lockers.<br>Book SRT (not KTX) from Busan to Suseo — same travel time (~2h30m), but drops you in Gangnam, a 10-min taxi from COEX. Saves 45–60 min subway ride with luggage.<br>Express bus or subway from Jungang Station area to East Busan (~30 min).<br>Haeundae Sky Capsule: must be booked weeks in advance.",
+    food: "<b>Lunch:</b> Haeundae Beach area — seafood restaurants along the coast.<br><b>Dinner:</b> Light meal at Busan before catching your 7 PM bus. COEX area for dinner after arrival.",
+    practical: "Check out of Toyoko Inn by 10:00 AM. Take the subway to Busan Station and lock your luggage in the coin lockers (₩2,000–3,000/day).<br><b>Bus to Seoul (7:00 PM):</b> You already have this ticket. Head to Busan Express Bus Terminal (부산종합버스터미널) — take subway Line 1 from Jungang Station to Busan Station (2 stops), the terminal is connected. Arrive at terminal by 6:30 PM for boarding.<br>Express bus or subway from Jungang Station area to East Busan (~30 min) for Haedong Yonggungsa.<br>Haeundae Sky Capsule: must be booked weeks in advance.",
     spots: [
       { name: "Haedong Yonggungsa Temple (해동용궁사)", type: "sight", lat: 35.1640, lng: 129.1820 },
       { name: "Haeundae Beach (해운대해수욕장)", type: "sight", lat: 35.1680, lng: 129.1640 },
-      { name: "Busan Station (SRT departure)", type: "waypoint", lat: 35.1540, lng: 129.0570 },
-      { name: "Suseo Station (SRT arrival)", type: "waypoint", lat: 37.5480, lng: 127.1460 },
+      { name: "Busan Express Bus Terminal (부산종합버스터미널)", type: "waypoint", lat: 35.1540, lng: 129.0570 },
+      { name: "Seoul Nambu Bus Terminal (서울남부터미널)", type: "waypoint", lat: 37.5540, lng: 127.0060 },
       { name: "Grand Intercontinental COEX", type: "hotel", lat: 37.5126, lng: 127.0590 }
     ]
   },
@@ -252,10 +252,9 @@ const removedItinerary = [
 // TRANSPORT & HOTEL SUMMARY
 const routeSummary = {
   transport: [
-    { segment: "Incheon → Seoul", method: "AREX (Airport Railroad)", duration: "~43 min", cost: "₩9,500" },
-    { segment: "Seoul → Gyeongju", method: "KTX (high-speed rail)", duration: "~2h15m", cost: "₩60,000–75,000" },
-    { segment: "Gyeongju → Busan", method: "KTX (high-speed rail)", duration: "~30 min", cost: "₩18,000–25,000" },
-    { segment: "Busan → Seoul", method: "SRT (Super Rapid Train)", duration: "~2h30m", cost: "₩65,000–80,000" },
+    { segment: "Incheon Airport → Gyeongju", method: "Airport Limousine Bus (direct)", duration: "~2h15m", cost: "₩22,000–28,000" },
+    { segment: "Gyeongju → Busan", method: "Intercity Bus (경주→부산)", duration: "~1h45m–2h", cost: "₩10,000–15,000" },
+    { segment: "Busan → Seoul", method: "Intercity Bus (부산→서울남부)", duration: "~3h45m–4h", cost: "Already purchased (7 PM departure)" },
     { segment: "Seoul → Incheon", method: "AREX (Airport Railroad)", duration: "~43 min", cost: "₩9,500" }
   ],
   hotels: [
