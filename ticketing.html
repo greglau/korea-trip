@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Korea Trip — Book in Advance | Gyeongju • Busan • Seoul</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #334155; background-color: #f8fafc; margin: 0; padding: 0; }
+    .header { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: white; padding: 40px 20px; text-align: center; }
+    .header h1 { margin: 0 0 8px 0; font-size: clamp(1.4rem, 4vw, 2rem); }
+    .header p { margin: 0; opacity: 0.85; font-size: 1rem; }
+    .back-link { display: inline-block; color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; margin-bottom: 15px; }
+    .back-link:hover { color: white; text-decoration: underline; }
+    .container { max-width: 900px; margin: 0 auto; padding: 25px 20px; }
+    .urgency-banner { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 16px 20px; border-radius: 8px; margin-bottom: 30px; }
+    .urgency-banner h3 { margin: 0 0 6px 0; color: #92400e; font-size: 1rem; }
+    .urgency-banner p { margin: 0; color: #78350f; font-size: 0.9rem; }
+    .urgency-banner.critical { background: #fef2f2; border-left-color: #ef4444; }
+    .urgency-banner.critical h3 { color: #991b1b; }
+    .urgency-banner.critical p { color: #7f1d1d; }
+    .urgency-banner.success { background: #f0fdf4; border-left-color: #22c55e; }
+    .urgency-banner.success h3 { color: #166534; }
+    .urgency-banner.success p { color: #14532d; }
+    .section { background: white; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    .section h2 { margin: 0 0 16px 0; color: #1e293b; font-size: 1.2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+    .section h2 i { margin-right: 8px; color: #3b82f6; }
+    .item { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #f1f5f9; align-items: flex-start; }
+    .item:last-child { border-bottom: none; padding-bottom: 0; }
+    .item:first-of-type { padding-top: 0; }
+    .check-box { width: 22px; height: 22px; border-radius: 6px; border: 2px solid #cbd5e1; flex-shrink: 0; margin-top: 3px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+    .check-box:hover { border-color: #3b82f6; background: #eff6ff; }
+    .check-box.checked { background: #2563eb; border-color: #2563eb; }
+    .check-box.checked::after { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: white; font-size: 12px; }
+    .item-content { flex-grow: 1; }
+    .item-title { font-weight: 600; color: #1e293b; margin-bottom: 4px; }
+    .item-desc { font-size: 0.9rem; color: #64748b; margin-bottom: 6px; }
+    .item-meta { display: flex; gap: 12px; flex-wrap: wrap; font-size: 0.8rem; }
+    .badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-weight: 500; }
+    .badge-urgent { background: #fef2f2; color: #dc2626; }
+    .badge-soon { background: #fef3c7; color: #d97706; }
+    .badge-info { background: #eff6ff; color: #2563eb; }
+    .badge-done { background: #f0fdf4; color: #16a34a; }
+    .badge-link { background: none; color: #2563eb; padding: 0; }
+    .badge-link a { color: #2563eb; text-decoration: none; }
+    .badge-link a:hover { text-decoration: underline; }
+    .transport-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.9rem; }
+    .transport-table th { background: #f1f5f9; text-align: left; padding: 10px 12px; font-weight: 600; color: #475569; border-bottom: 2px solid #e2e8f0; }
+    .transport-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; vertical-align: top; }
+    .transport-table td:first-child { font-weight: 500; color: #1e293b; white-space: nowrap; }
+    .transport-table td:nth-child(2) { width: 100px; color: #64748b; }
+    .transport-table td:nth-child(3) { width: 120px; color: #64748b; }
+    .note { background: #eff6ff; border-left: 3px solid #3b82f6; padding: 12px 16px; border-radius: 0 8px 8px 0; margin-top: 16px; font-size: 0.9rem; color: #1e40af; }
+    .note i { margin-right: 6px; color: #3b82f6; }
+    @media (max-width: 600px) { .item-meta { flex-direction: column; gap: 6px; } .transport-table th, .transport-table td { padding: 8px 10px; font-size: 0.85rem; } .transport-table td:nth-child(2), .transport-table td:nth-child(3) { width: auto; } }
+    @media print { .check-box { border-color: #333 !important; } body { background: white; } .section { box-shadow: none; border: 1px solid #ddd; } }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Main Itinerary</a>
+  <h1><i class="fa-solid fa-ticket"></i> Book in Advance</h1>
+  <p>Everything you need to reserve before July 2025</p>
+</div>
+
+<div class="container">
+
+  <!-- URGENT -->
+  <div class="urgency-banner critical">
+    <h3><i class="fa-solid fa-triangle-exclamation"></i> BOOK THESE IMMEDIATELY</h3>
+    <p>These items sell out fast or have strict advance-booking windows. Do not wait.</p>
+  </div>
+
+  <!-- TRANSPORT -->
+  <div class="section">
+    <h2><i class="fa-solid fa-train"></i> Inter-City Transport (Book 1–2 Months Ahead)</h2>
+    <table class="transport-table">
+      <tr><th>Segment</th><th>Duration</th><th>Cost (KRW)</th></tr>
+      <tr>
+        <td>Incheon Airport → Seoul Station</td>
+        <td>~43 min</td>
+        <td>₩9,500 (AREX Regular)</td>
+      </tr>
+      <tr>
+        <td><b>Seoul → Singyeongju (KTX)</b></td>
+        <td><b>~2h15m</b></td>
+        <td><b>₩60,000–75,000</b></td>
+      </tr>
+      <tr>
+        <td><b>Singyeongju → Busan (KTX)</b></td>
+        <td><b>~30 min</b></td>
+        <td><b>₩18,000–25,000</b></td>
+      </tr>
+      <tr>
+        <td><b>Busan → Suseo (SRT)</b></td>
+        <td><b>~2h30m</b></td>
+        <td><b>₩65,000–80,000</b></td>
+      </tr>
+      <tr>
+        <td>Seoul Station → Incheon Airport</td>
+        <td>~43 min</td>
+        <td>₩9,500 (AREX Regular)</td>
+      </tr>
+    </table>
+    <div class="note">
+      <i class="fa-solid fa-circle-info"></i>
+      <b>Korail (KTX):</b> Book at <a href="https://www.letskorail.com/ebk01/" target="_blank">letskorail.com</a> — English site available. July is peak season; book as soon as tickets open (usually 30 days in advance).<br>
+      <b>SRT:</b> Book at <a href="https://www.srail.co.kr/" target="_blank">srail.co.kr</a> — English site available. SRT from Busan to Suseo drops you in Gangnam (10-min taxi to COEX), saving 45–60 min vs KTX to Seoul Station + subway.<br>
+      <b>AREX:</b> Can be bought at airport ticket machines or with T-money card. Reserved seat (₩2,000 extra) recommended for Day 1 arrival.
+    </div>
+  </div>
+
+  <!-- CRITICAL BOOKINGS -->
+  <div class="section">
+    <h2><i class="fa-solid fa-clock"></i> Critical Advance Bookings</h2>
+
+    <div class="item">
+      <div class="check-box" onclick="this.classList.toggle('checked')"></div>
+      <div class="item-content">
+        <div class="item-title">Changdeokgung Secret Garden (Huwon) Tour</div>
+        <div class="item-desc">Guided tour of the royal retreat. Strict daily cap of 100 visitors per time slot. English tours available but limited — book the earliest slot for best light.</div>
+        <div class="item-meta">
+          <span class="badge badge-urgent"><i class="fa-solid fa-fire"></i> BOOK 6 DAYS AHEAD</span>
+          <span class="badge badge-info">cdg.go.kr/english</span>
+          <span class="badge badge-info">₩3,000 entry + ₩5,000 tour</span>
+          <span class="badge badge-info">2.5 hours</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="check-box" onclick="this.classList.toggle('checked')"></div>
+      <div class="item-content">
+        <div class="item-title">Haeundae Sky Capsule</div>
+        <div class="item-desc">Miniature capsule train along Haeundae coast. Extremely popular — books out weeks in advance. Must reserve online.</div>
+        <div class="item-meta">
+          <span class="badge badge-urgent"><i class="fa-solid fa-fire"></i> BOOK 2–4 WEEKS AHEAD</span>
+          <span class="badge badge-info">haeundaesky.com</span>
+          <span class="badge badge-info">₩16,500/person</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="check-box" onclick="this.classList.toggle('checked')"></div>
+      <div class="item-content">
+        <div class="item-title">ICML Conference Registration & Badge</div>
+        <div class="item-desc">Ensure your conference registration is complete and badge/passes are ready. COEX venue — walk from hotel.</div>
+        <div class="item-meta">
+          <span class="badge badge-urgent"><i class="fa-solid fa-fire"></i> CONFIRM NOW</span>
+          <span class="badge badge-info">ICML 2025 website</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="check-box" onclick="this.classList.toggle('checked')"></div>
+      <div class="item-content">
+        <div class="item-title">Seoul → Incheon Airport (AREX Reserved Seat)</div>
+        <div class="item-desc">Reserved seat on AREX for departure day. ₩2,000 extra but guarantees space with luggage at ~12:30 PM.</div>
+        <div class="item-meta">
+          <span class="badge badge-soon"><i class="fa-solid fa-calendar-check"></i> BOOK 1 WEEK AHEAD</span>
+          <span class="badge badge-info">₩11,500 total</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- HOTELS -->
+  <div class="section">
+    <h2><i class="fa-solid fa-hotel"></i> Hotels (Book ASAP for July)</h2>
+    <table class="transport-table">
+      <tr><th>Nights</th><th>Hotel</th><th>Location</th></tr>
+      <tr>
+        <td>Night 1 (Jul 3)</td>
+        <td>Gyeongju Hanok Guesthouse</td>
+        <td>Central Gyeongju, near Daereungwon</td>
+      </tr>
+      <tr>
+        <td>Night 2 (Jul 4)</td>
+        <td>Toyoko Inn Busan Jungang Station</td>
+        <td>Jungang Station, Line 1</td>
+      </tr>
+      <tr>
+        <td>Nights 3–8 (Jul 5–12)</td>
+        <td><b>Grand Intercontinental Seoul COEX</b></td>
+        <td>Gangnam — right at conference venue</td>
+      </tr>
+      <tr>
+        <td>Nights 9–10 (Jul 12–14)</td>
+        <td>Boutique Hotel / Hanok Guesthouse</td>
+        <td>Jongno/Anguk, near Line 3 Anguk Station</td>
+      </tr>
+    </table>
+    <div class="note">
+      <i class="fa-solid fa-circle-info"></i>
+      July is peak summer travel season in Korea. All hotels should be booked now via Trip.com, Booking.com, or directly. Grand Intercontinental COEX is premium — expect ₩250,000–400,000/night. Toyoko Inn is budget (~₩70,000–100,000/night).
+    </div>
+  </div>
+
+  <!-- OPTIONAL BUT RECOMMENDED -->
+  <div class="section">
+    <h2><i class="fa-solid fa-star"></i> Optional but Recommended</h2>
+
+    <div class="item">
+      <div class="check-box" onclick="this.classList.toggle('checked')"></div>
+      <div class="item-content">
+        <div class="item-title">T-money Card</div>
+        <div class="item-desc">Reloadable transit card for Seoul/Busan/Gyeongju subways, buses, and taxis. Buy at any convenience store (CU, GS25, 7-Eleven) or airport arrival hall. Load ₩30,000–50,000.</div>
+        <div class="item-meta">
+          <span class="badge badge-info">₩2,500 deposit + ₩30,000+ load</span>
+          <span class="badge badge-info">Airport / convenience stores</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="check-box" onclick="this.classList.toggle('checked')"></div>
+      <div class="item-content">
+        <div class="item-title">Naver Maps / KakaoMap Download</div>
+        <div class="item-desc">Download offline maps for Seoul and Busan. Google Maps does NOT work well for Korean bus routing. Naver Maps has English UI option.</div>
+        <div class="item-meta">
+          <span class="badge badge-info">Free apps</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="check-box" onclick="this.classList.toggle('checked')"></div>
+      <div class="item-content">
+        <div class="item-title">Airport Lounge Access (Incheon)</div>
+        <div class="item-desc">3.5 hours before departure gives plenty of time, but Incheon lounges (Korean Air, Asiana, Plaza) are excellent. Consider purchasing day pass (~₩40,000–60,000) if you want a premium send-off.</div>
+        <div class="item-meta">
+          <span class="badge badge-info">Optional</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="urgency-banner">
+    <h3><i class="fa-solid fa-list-check"></i> Quick Checklist — Do This Now</h3>
+    <p style="margin:0; font-size:0.9rem;">
+      1. <b>KTX Seoul→Gyeongju + Gyeongju→Busan</b> (letskorail.com) &nbsp;|&nbsp;
+      2. <b>SRT Busan→Suseo</b> (srail.co.kr) &nbsp;|&nbsp;
+      3. <b>Changdeokgung Secret Garden</b> (cdg.go.kr — 6 days before) &nbsp;|&nbsp;
+      4. <b>Haeundae Sky Capsule</b> (haeundaesky.com — 2–4 weeks before) &nbsp;|&nbsp;
+      5. <b>All hotels</b> (Trip.com / direct) &nbsp;|&nbsp;
+      6. <b>ICML badge/registration</b> confirmed
+    </p>
+  </div>
+
+</div>
+
+<script>
+  // Persist checkbox state in localStorage
+  document.querySelectorAll('.check-box').forEach((box, i) => {
+    const saved = localStorage.getItem('korea-ticketing-' + i);
+    if (saved === 'true') box.classList.add('checked');
+    box.addEventListener('click', () => {
+      localStorage.setItem('korea-ticketing-' + i, box.classList.contains('checked'));
+    });
+  });
+</script>
+
+</body>
+</html>

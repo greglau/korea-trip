@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Korea Trip — Gyeongju • Busan • Seoul (12 Days) | Professional Tour Package</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #334155; background-color: #f8fafc; margin: 0; padding: 0; }
+    .header { background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)), url('https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=1600&q=80') center/cover; color: white; padding: 60px 20px; text-align: center; }
+    .header h1 { margin: 0 0 10px 0; font-size: clamp(1.5rem, 5vw, 2.5rem); }
+    .header p { margin: 0; font-size: 1.1rem; opacity: 0.9; }
+    .layout { display: flex; max-width: 1200px; margin: 0 auto; padding: 20px; gap: 30px; }
+    .sidebar { width: 260px; flex-shrink: 0; }
+    .sidebar-nav { position: sticky; top: 20px; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); max-height: calc(100vh - 40px); overflow-y: auto; padding-bottom: 60px; }
+    .sidebar-nav h3 { margin-top: 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; color: #1e293b; }
+    .sidebar-nav ul { list-style: none; padding: 0; margin: 0; }
+    .sidebar-nav li { margin-bottom: 8px; }
+    .sidebar-nav a { display: block; text-decoration: none; color: #475569; padding: 6px 10px; border-radius: 6px; transition: all 0.2s; font-size: 0.9rem; }
+    .sidebar-nav a:hover, .sidebar-nav a.active { background: #eff6ff; color: #2563eb; font-weight: 500; }
+    .content { flex-grow: 1; min-width: 0; }
+    .summary-card { background: white; border-radius: 12px; padding: 25px; margin-bottom: 30px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border-top: 4px solid #2563eb; }
+    .summary-card h2 { margin-top: 0; color: #1e293b; }
+    .day-card { background: white; border-radius: 12px; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-left: 4px solid #3b82f6; scroll-margin-top: 20px; }
+    .day-header { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: baseline; margin-bottom: 15px; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; }
+    .day-title { font-size: 1.25rem; font-weight: 600; color: #0f172a; }
+    .day-meta { display: flex; gap: 15px; font-size: 0.9rem; color: #64748b; }
+    .meta-item i { color: #3b82f6; margin-right: 5px; }
+    .history-box { background-color: #fdf8f6; border-left: 4px solid #d97706; padding: 12px; border-radius: 0 8px 8px 0; margin-bottom: 15px; color: #475569; font-size: 0.95rem; line-height: 1.6; }
+    .history-box i { color: #d97706; margin-right: 5px; }
+    .details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 20px; background: #f8fafc; padding: 15px; border-radius: 8px; }
+    .detail-item { font-size: 0.95rem; }
+    .detail-label { font-weight: 600; color: #475569; display: block; margin-bottom: 3px; }
+    .schedule { margin-top: 20px; }
+    .schedule h4 { margin: 0 0 10px 0; color: #1e293b; }
+    .schedule ul { margin: 0; padding-left: 20px; color: #475569; }
+    .schedule li { margin-bottom: 8px; }
+    .practical-box { background: #f0fdf4; border: 1px solid #bbf7d0; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+    .practical-box h4 { margin-top: 0; color: #166534; }
+    .practical-box ul { margin: 0; padding-left: 20px; color: #166534; }
+    .practical-box li { margin-bottom: 8px; }
+    .timing-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9rem; }
+    .timing-table th { background: #f1f5f9; text-align: left; padding: 8px 12px; font-weight: 600; color: #475569; border-bottom: 2px solid #e2e8f0; }
+    .timing-table td { padding: 8px 12px; border-bottom: 1px solid #f1f5f9; vertical-align: top; }
+    .timing-table td:first-child { white-space: nowrap; font-weight: 500; color: #1e293b; width: 140px; }
+    .timing-table td:nth-child(2) { width: 100px; color: #64748b; }
+    .note-box { background: #eff6ff; border: 1px solid #bfdbfe; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+    .note-box h3 { margin-top: 0; color: #1e3a8a; }
+    .fab { display: none; position: fixed; bottom: 20px; right: 20px; background: #2563eb; color: white; width: 56px; height: 56px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.3); justify-content: center; align-items: center; font-size: 24px; cursor: pointer; z-index: 1000; border: none; }
+    .mobile-menu-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 998; }
+    .mobile-menu { position: fixed; bottom: -100%; left: 0; right: 0; background: white; border-radius: 20px 20px 0 0; padding: 20px 20px 40px 20px; z-index: 999; transition: bottom 0.3s ease-in-out; box-shadow: 0 -4px 10px rgba(0,0,0,0.1); max-height: 85vh; overflow-y: auto; }
+    .mobile-menu.open { bottom: 0; }
+    .mobile-menu-close { position: absolute; top: 15px; right: 20px; font-size: 24px; color: #64748b; cursor: pointer; background: none; border: none; }
+    @media (max-width: 768px) { .layout { flex-direction: column; padding: 10px; } .sidebar { display: none; } .fab { display: flex; } .header { padding: 30px 15px; } .header h1 { font-size: 1.8rem; } }
+    @media print { @page { margin: 1cm; } .fab, .sidebar, .mobile-menu-overlay, .actions, .mobile-menu { display: none !important; } .layout { display: block; padding: 0; max-width: 100%; } .content { width: 100%; } body { background: white; font-size: 11pt; color: black; } .header { padding: 20px 0; background: none; color: black; border-bottom: 2px solid black; } .header h1 { font-size: 24pt; color: black; } .day-card { page-break-inside: avoid; border: 1px solid #ddd; box-shadow: none; padding: 15px; margin-bottom: 20px; } .summary-card { border: 1px solid #ddd; box-shadow: none; padding: 15px; margin-bottom: 20px; } .details-grid { display: block; background: none; padding: 0; } .detail-item { margin-bottom: 10px; } .history-box { background: none; border-left: 2px solid #555; padding-left: 10px; color: #333; } .practical-box { background: none; border-left: 2px solid #555; padding-left: 10px; color: #333; } .timing-table { font-size: 9pt; } .timing-table th { background: #eee !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; } a { text-decoration: none; color: black; } }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <a href="index.html" style="display:inline-block; background:rgba(255,255,255,0.15); backdrop-filter:blur(8px); color:white; padding:8px 20px; border-radius:8px; text-decoration:none; font-size:0.95rem; margin-bottom:20px; border:1px solid rgba(255,255,255,0.3); transition:all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+    <i class="fa-solid fa-arrow-left"></i> Back to Main Itinerary
+  </a>
+  <h1>Korea Trip — Gyeongju, Busan & Seoul (12 Days)</h1>
+  <p>Optimized Itinerary · July 3–14, 2025 · No intense hiking</p>
+</div>
+
+<div class="layout">
+  <div class="sidebar">
+    <div class="sidebar-nav">
+      <h3>Navigation</h3>
+      <ul id="desktop-nav">
+<li><a href="#day1">Day 1 (Gyeongju Arrival)</a></li>
+<li><a href="#day2">Day 2 (Gyeongju → Busan)</a></li>
+<li><a href="#day3">Day 3 (Busan → Seoul)</a></li>
+<li><a href="#day4">Day 4 (ICML Day 1)</a></li>
+<li><a href="#day5">Day 5 (ICML Day 2)</a></li>
+<li><a href="#day6">Day 6 (ICML Day 3)</a></li>
+<li><a href="#day7">Day 7 (ICML Day 4)</a></li>
+<li><a href="#day8">Day 8 (ICML Final)</a></li>
+<li><a href="#day9">Day 9 (Seoul Recovery)</a></li>
+<li><a href="#day10">Day 10 (Secret Garden & Alleys)</a></li>
+<li><a href="#day11">Day 11 (Wagyu & City Wall)</a></li>
+<li><a href="#day12">Day 12 (Departure)</a></li>
+<li><a href="#transport">Transport & Hotels</a></li>
+<li><a href="#removed">What We Left Out</a></li>
+<li style="margin-top:12px; padding-top:10px; border-top:2px solid #e2e8f0;"><a href="ticketing.html" style="color:#16a34a; font-weight:600;"><i class="fa-solid fa-ticket"></i> Book in Advance</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="closeMenuBtn"><i class="fa-solid fa-xmark"></i></button>
+    <h3 style="margin-top:0; border-bottom:1px solid #e2e8f0; padding-bottom:10px;">Navigation</h3>
+    <ul class="sidebar-nav" style="box-shadow:none; padding:0;" id="mobile-nav">
+<li><a href="#day1">Day 1 (Gyeongju Arrival)</a></li>
+<li><a href="#day2">Day 2 (Gyeongju → Busan)</a></li>
+<li><a href="#day3">Day 3 (Busan → Seoul)</a></li>
+<li><a href="#day4">Day 4 (ICML Day 1)</a></li>
+<li><a href="#day5">Day 5 (ICML Day 2)</a></li>
+<li><a href="#day6">Day 6 (ICML Day 3)</a></li>
+<li><a href="#day7">Day 7 (ICML Day 4)</a></li>
+<li><a href="#day8">Day 8 (ICML Final)</a></li>
+<li><a href="#day9">Day 9 (Seoul Recovery)</a></li>
+<li><a href="#day10">Day 10 (Secret Garden & Alleys)</a></li>
+<li><a href="#day11">Day 11 (Wagyu & City Wall)</a></li>
+<li><a href="#day12">Day 12 (Departure)</a></li>
+<li><a href="#transport">Transport & Hotels</a></li>
+<li><a href="#removed">What We Left Out</a></li>
+<li style="margin-top:12px; padding-top:10px; border-top:2px solid #e2e8f0;"><a href="ticketing.html" style="color:#16a34a; font-weight:600;"><i class="fa-solid fa-ticket"></i> Book in Advance</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="summary-card">
+      <h2>Itinerary Overview</h2>
+      <p><b>Route:</b> Gyeongju → Busan → Seoul (ICML) → Incheon</p>
+      <p><b>Dates:</b> July 3–14, 2025 (12 days)</p>
+      <p><b>Pacing:</b> Relaxed, solo-traveler friendly. No intense hiking.</p>
+      <p><b>Key Features:</b></p>
+      <ul style="margin: 10px 0; padding-left: 20px;">
+        <li>Start in Gyeongju (1 day) — UNESCO tombs & temples</li>
+        <li>Easy 30-min KTX hop to Busan (1 night) — seafood markets & coastal temples</li>
+        <li><b>SRT from Busan to Suseo (Jul 5)</b> — drops you at Grand Intercontinental COEX, saves 45–60 min subway ride with luggage</li>
+        <li><b>7 nights at Grand Intercontinental COEX (Jul 5–12)</b> — right at the conference venue</li>
+        <li><b>2 nights in Jongno/Anguk (Jul 12–14)</b> — traditional cultural experience, walking distance to Changdeokgung, Gwangjang Market</li>
+        <li>Clean one-way flow: South → Central → West (Incheon)</li>
+      </ul>
+      <p style="margin-top:12px; padding:10px 14px; background:#f0fdf4; border-radius:8px; border-left:3px solid #22c55e;">
+        <b><i class="fa-solid fa-ticket"></i> Don't forget to book in advance:</b>
+        <a href="ticketing.html" style="color:#16a34a; font-weight:600;">View full checklist →</a>
+        <span style="display:block; margin-top:4px; font-size:0.85rem; color:#64748b;">KTX/SRT trains · Changdeokgung Secret Garden (6 days ahead) · Haeundae Sky Capsule</span>
+      </p>
+    </div>
+
+    <!-- DAY 1 -->
+    <div class="day-card" id="day1">
+      <div class="day-header">
+        <span class="day-title">Day 1 — Gyeongju Arrival (Jul 3, Thu)</span>
+        <div class="day-meta">
+          <span class="meta-item"><i class="fa-solid fa-route"></i> ~380km (KTX)</span>
+          <span class="meta-item"><i class="fa-regular fa-clock"></i> ~2h15m transit</span>
+        </div>
+      </div>
+
+      <table class="timing-table">
+        <tr><th>Time</th><th>Duration</th><th>Activity</th></tr>
+        <tr><td>10:00</td><td>—</td><td>Flight lands at Incheon Airport (ICN). Clear immigration, collect bags.</td></tr>
+        <tr><td>10:30–12:30</td><td>~2h</td><td>AREX (Airport Railroad) to Seoul Station. Allow time for immigration, baggage claim, and transit.</td></tr>
+        <tr><td>13:00–15:15</td><td>~2h15m</td><td><b>KTX Seoul → Singyeongju Station.</b> High-speed rail. Grab a bento box or snacks at the station for lunch on the train. Book in advance via Korail — July is peak season.</td></tr>
+        <tr><td>15:15–16:00</td><td>~45 min</td><td>Taxi or local bus from Singyeongju Station to hotel in central Gyeongju. Drop off bags.</td></tr>
+        <tr><td>16:30–18:30</td><td>~2h</td><td><b>Daereungwon Tomb Complex (대릉원)</b> — The 23 massive grass tumuli of the Silla kingdom. Walk the full perimeter (approx. 1–1.5 hrs). Very flat, very relaxing.</td></tr>
+        <tr><td>18:30–20:00</td><td>~1.5h</td><td><b>Hwangridan-gil Street (황리단길)</b> — The commercial alley just east of the tombs has good coffee shops and hanok-style boutiques. Spectacular as the sun goes down.</td></tr>
+        <tr><td>20:00–21:30</td><td>~1.5h</td><td><b>Dinner:</b> Hwangnam-ppang (황남빵) at Choi Yeonghwa Ppang — the original red bean bun shop. Buy warm ones to eat while walking.</td></tr>
+        <tr><td>21:30–22:00</td><td>~30 min</td><td><b>Donggung Palace & Wolji Pond (동궁과 월지)</b> — The ancient royal retreat beautifully illuminated across the water. A 10–15 min walk from Hwangridan-gil. Free entry.</td></tr>
+      </table>
+
+      <div class="details-grid">
+        <div class="detail-item"><span class="detail-label">Accommodation</span>Gyeongju Hanok Guesthouse (e.g., Gyeongju Ran Hanok or similar). Traditional hanok compound with ondol rooms, steps from Daereungwon.<br><a href='https://www.trip.com/' target='_blank'>Trip.com Booking</a></div>
+        <div class="detail-item"><span class="detail-label">Food</span><b>Lunch:</b> Bento box or snacks at Seoul Station for the train.<br><b>Dinner:</b> Hwangnam-ppang (황남빵) at Choi Yeonghwa Ppang — the original red bean bun shop.</div>
+      </div>
+
+      <div class="practical-box">
+        <h4><i class="fa-solid fa-circle-info"></i> Practical Tips</h4>
+        <ul>
+          <li><b>Flight lands ~10:00 AM.</b> By the time you clear immigration, get bags, and take AREX to Seoul Station, it will be ~12:30 PM. Catch a 1:00–1:30 PM KTX, arriving Singyeongju Station around 3:30 PM.</li>
+          <li><b>KTX Seoul → Gyeongju:</b> ~2h15m. Book in advance via Korail — July is peak season.</li>
+          <li><b>Gyeongju has no subway:</b> Use local city buses (Naver Maps handles Korean bus routing well) or taxis, which are inexpensive.</li>
+          <li><b>T-money card:</b> Get one at Incheon on arrival. Top up ₩50,000. Works on all subways and buses.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day-card" id="day2">
+      <div class="day-header">
+        <span class="day-title">Day 2 — Gyeongju → Busan (Jul 4, Fri)</span>
+        <div class="day-meta">
+          <span class="meta-item"><i class="fa-solid fa-route"></i> ~70km (KTX)</span>
+          <span class="meta-item"><i class="fa-regular fa-clock"></i> 2h transit</span>
+        </div>
+      </div>
+
+      <table class="timing-table">
+        <tr><th>Time</th><th>Duration</th><th>Activity</th></tr>
+        <tr><td>09:00–13:00</td><td>~4h</td><td><b>Bulguksa Temple (불국사) & Seokguram Grotto (석굴암).</b><br>Start by 9:00 AM. Bus 10 or 11 out to Bulguksa Temple, then catch the shuttle up the mountain to Seokguram Grotto. Seokguram viewings are timed in slots of about 10 minutes each; peak July crowds mean waiting is likely. Go straight there.<br><br>UNESCO World Heritage. One of the masterpieces of Silla-era architecture: stone staircases Cheongungyo and Baegungyo, twin pagodas Dabotap and Seokgatap. Allow 1–1.5 hours at Bulguksa, then shuttle to Seokguram.</td></tr>
+        <tr><td>13:00–14:00</td><td>~1h</td><td><b>Lunch:</b> Quick lunch in central Gyeongju after Seokguram.</td></tr>
+        <tr><td>14:00–14:30</td><td>~30 min</td><td>Return to hotel, retrieve luggage.</td></tr>
+        <tr><td>14:30–15:00</td><td>~30 min</td><td>Taxi or bus to Singyeongju Station for KTX.</td></tr>
+        <tr><td>15:00–15:30</td><td>~30 min</td><td><b>KTX Singyeongju → Busan Station.</b> One of the shortest intercity train journeys in Korea. Book via Korail. ₩18,000–25,000.</td></tr>
+        <tr><td>15:30–16:30</td><td>~1h</td><td>Taxi or subway from Busan Station to Toyoko Inn Jungang Station. Check in, drop bags.</td></tr>
+        <tr><td>16:30–18:30</td><td>~2h</td><td><b>Jagalchi Market (자갈치시장)</b> — Korea's largest seafood market. Walk the multi-level building, watch live fish and shellfish being sold, see the auction floor.</td></tr>
+        <tr><td>18:30–20:00</td><td>~1.5h</td><td><b>BIFF Square (비프광장)</b> — Historic square with street food, movie posters from the Busan International Film Festival. Try the ssiat hotteok (sweet seed-filled pancakes).</td></tr>
+      </table>
+
+      <div class="details-grid">
+        <div class="detail-item"><span class="detail-label">Accommodation</span>Toyoko Inn Busan Jungang Station (東京堂인釜山中央駅). Right on Line 1 subway station. Clean, reliable Japanese chain — no-frills but functional and well-located for transit.<br><a href='https://www.trip.com/' target='_blank'>Trip.com Booking</a></div>
+        <div class="detail-item"><span class="detail-label">Food</span><b>Lunch:</b> Quick lunch in Gyeongju after Seokguram (~1:00 PM).<br><b>Dinner:</b> Ssiat hotteok (sweet seed-filled pancakes) at BIFF Square street stalls.</div>
+      </div>
+
+      <div class="practical-box">
+        <h4><i class="fa-solid fa-circle-info"></i> Practical Tips</h4>
+        <ul>
+          <li><b>KTX Singyeongju → Busan:</b> Only 30 minutes — one of the shortest intercity train journeys in Korea. Book via Korail.</li>
+          <li><b>Busan subway:</b> Excellent and covers all the main sites in Nampo-dong (2 stops from Jungang Station).</li>
+          <li><b>Toyoko Inn Jungang Station:</b> Directly on Line 1 — perfect for hopping to Jagalchi Market (5 min) or Busan Station for KTX.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day-card" id="day3">
+      <div class="day-header">
+        <span class="day-title">Day 3 — Busan → Seoul (Jul 5, Sat)</span>
+        <div class="day-meta">
+          <span class="meta-item"><i class="fa-solid fa-route"></i> ~450km (SRT)</span>
+          <span class="meta-item"><i class="fa-regular fa-clock"></i> Late-night transit (~7pm–9:30pm)</span>
+        </div>
+      </div>
+
+      <table class="timing-table">
+        <tr><th>Time</th><th>Duration</th><th>Activity</th></tr>
+        <tr><td>10:00</td><td>—</td><td>Check out of Toyoko Inn. Take the subway to Busan Station and lock your luggage in the coin lockers.</td></tr>
+        <tr><td>11:00–12:30</td><td>~1.5h</td><td><b>Haedong Yonggungsa Temple (해동용궁사)</b> — One of the few temples in Korea built right on the coastline. The main hall sits on a rocky outcrop with waves crashing below — stunning views and peaceful atmosphere.</td></tr>
+        <tr><td>12:30–14:00</td><td>~1.5h</td><td><b>Lunch:</b> Haeundae Beach area — seafood restaurants along the coast.</td></tr>
+        <tr><td>14:00–17:30</td><td>~3.5h</td><td><b>Haeundae Beach (해운대해수욕장)</b> — Busan's most famous beach. Gentle coastal walk, refreshing dip if you dare (it's cold!). Crystal clear water in July.<br><br><b>Haeundae Sky Capsule.</b> Must be booked weeks in advance. A miniature capsule train that runs along the coast — unique photo opportunity.</td></tr>
+        <tr><td>17:30–18:30</td><td>~1h</td><td>Transit back to Busan Station. Retrieve luggage from coin lockers.</td></tr>
+        <tr><td>18:30–19:00</td><td>~30 min</td><td>Dinner at Busan Station area.</td></tr>
+        <tr><td>19:00–21:30</td><td>~2h30m</td><td><b>Late SRT Busan → Suseo Station.</b> Reserved seat recommended. Book in advance via Korail — July is peak season. ₩65,000–80,000.</td></tr>
+        <tr><td>21:30–22:00</td><td>~30 min</td><td>Taxi from Suseo Station to Grand Intercontinental COEX. 10-minute ride.</td></tr>
+        <tr><td>22:00</td><td>—</td><td>Check into hotel. Drop bags, rest before ICML.</td></tr>
+      </table>
+
+      <div class="details-grid">
+        <div class="detail-item"><span class="detail-label">Accommodation</span>Grand Intercontinental Seoul COEX (그랜드 인터컨티넨탈 서울 코엑스). Right at the conference venue. Ultra-convenient for ICML days.<br><a href='https://www.trip.com/' target='_blank'>Trip.com Booking</a></div>
+        <div class="detail-item"><span class="detail-label">Food</span><b>Lunch:</b> Haeundae Beach area — seafood restaurants along the coast.<br><b>Dinner:</b> Light meal at Busan Station or SRT onboard. COEX area for dinner after arrival.</div>
+      </div>
+
+      <div class="practical-box">
+        <h4><i class="fa-solid fa-circle-info"></i> Practical Tips</h4>
+        <ul>
+          <li><b>SRT (not KTX):</b> Book SRT from Busan to Suseo — same travel time (~2h30m), but drops you in Gangnam, a 10-min taxi from COEX. Saves 45–60 min subway ride with luggage.</li>
+          <li><b>Luggage:</b> Lock in coin lockers at Busan Station. Go enjoy the temple and beach unencumbered.</li>
+          <li><b>Express bus or subway:</b> From Jungang Station area to East Busan (~30 min).</li>
+          <li><b>Haeundae Sky Capsule:</b> Must be booked weeks in advance.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day-card" id="day4">
+      <div class="day-header">
+        <span class="day-title">Day 4 — ICML Day 1 (Jul 6, Sun)</span>
+        <div class="day-meta">
+          <span class="meta-item"><i class="fa-solid fa-route"></i> Subway to Gangnam</span>
+          <span class="meta-item"><i class="fa-regular fa-clock"></i> Conference day</span>
+        </div>
+      </div>
+
+      <table class="timing-table">
+        <tr><th>Time</th><th>Duration</th><th>Activity</th></tr>
+        <tr><td>09:00–17:00</td><td>~8h</td><td><b>ICML Conference at COEX (코엑스 컨벤션센터)</b> — Technical sessions, posters, networking.</td></tr>
+        <tr><td>12:00–13:00</td><td>~1h</td><td><b>Lunch Break Escape: Bongeunsa Temple (봉은사)</b> — Across Yeongdong-daero from COEX, 5-min walk. The 23m standing Maitreya Buddha in stone, cedar forest path behind the main halls. Free entry.</td></tr>
+        <tr><td>17:30–20:00</td><td>~2.5h</td><td><b>Evening: Ikseon-dong (익선동)</b> — Narrow alleys behind Changdeokgung Palace, converted hanok buildings with craft tea shops, makgeolli (rice wine) bars, and small restaurants. Very atmospheric at dusk.</td></tr>
+      </table>
+
+      <div class="details-grid">
+        <div class="detail-item"><span class="detail-label">Accommodation</span>Grand Intercontinental Seoul COEX (continued)</div>
+        <div class="detail-item"><span class="detail-label">Food</span><b>Lunch:</b> COEX underground mall — naengmyeon (cold noodles) or bibimbap options.<br><b>Dinner:</b> Makgeolli + pancakes (makgeolli + bindaetteok) at an Ikseon-dong hanok bar.</div>
+      </div>
+
+      <div class="practical-box">
+        <h4><i class="fa-solid fa-circle-info"></i> Practical Tips</h4>
+        <ul>
+          <li><b>Subway Line 2:</b> From COEX area to Ikseon-dong (Anguk Station) takes ~30 min.</li>
+          <li><b>Naver Maps:</b> Essential for Seoul navigation. Kakao Maps also excellent.</li>
+          <li><b>COEX to Bongeunsa:</b> 5-minute walk across Yeongdong-daero. Easy lunch break escape.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DAY 5 -->
+    <div class="day-card" id="day5">
+      <div class="day-header">
+        <span class="day-title">Day 5 — ICML Day 2 (Jul 7, Mon)</span>
+        <div class="day-meta">
+          <span class="meta-item"><i class="fa-solid fa-route"></i> Subway to Gangnam</span>
+          <span class="meta-item"><i class="fa-regular fa-clock"></i> Conference day</span>
+        </div>
+      </div>
+
+      <table class="timing-table">
+        <tr><th>Time</th><th>Duration</th><th>Activity</th></tr>
+        <tr><td>09:00–17:00</td><td>~8h</td><td><b>ICML Conference at COEX (코엑스 컨벤션센터)</b> — Technical sessions, posters, networking.</td></tr>
+        <tr><td>12:00–13:00</td><td>~1h</td><td><b>Lunch Break Escape: Bongeunsa Temple (봉은사)</b> — Across Yeongdong-daero from COEX, 5-min walk. The 23m standing Maitreya Buddha in stone, cedar forest path behind the main halls. Free entry.</td></tr>
+      </table>
+
+      <div class="details-grid">
+        <div class="detail-item"><span class="detail-label">Accommodation</span>Grand Intercontinental Seoul COEX (continued)</div>
+        <div class="detail-item"><span class="detail-label">Food</span><b>Lunch:</b> COEX underground mall — naengmyeon (cold noodles) or bibimbap options.<br><b>Dinner:</b> COEX area or Apgujeong-dong.</div>
+      </div>
+
+      <div class="practical-box">
+        <h4><i class="fa-solid fa-circle-info"></i> Practical Tips</h4>
+        <ul>
+          <li><b>Subway Line 2:</b> From COEX area. Naver Maps is essential for Seoul navigation.</li>
+          <li><b>ICML badge:</b> Make sure you have your conference badge and registration materials ready.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DAY 6 -->
+    <div class="day-card" id="day6">
+      <div class="day-header">
+        <span class="day-title">Day 6 — ICML Day 3 (Jul 8, Tue)</span>
+        <div class="day-meta">
+          <span class="meta-item"><i class="fa-solid fa-route"></i> Subway to Gangnam</span>
+          <span class="meta-item"><i class="fa-regular fa-clock"></i> Conference day</span>
+        </div>
+      </div>
+
+      <table class="timing-table">
+        <tr><th>Time</th><th>Duration</th><th>Activity</th></tr>
+        <tr><td>09:00–17:00</td><td>~8h</td><td><b>ICML Conference at COEX (코엑스 컨벤션센터)</b> — Technical sessions, posters, networking.</td></tr>
+        <tr><td>12:00–13:00</td><td>~1h</td><td><b>Lunch Break Escape: Bongeunsa Temple (봉은사)</b> — Across Yeongdong-daero from COEX, 5-min walk. The 23m standing Maitreya Buddha in stone, cedar forest path behind the main halls. Free entry.</td></tr>
+      </table>
+
+      <div class="details-grid">
+        <div class="detail-item"><span class="detail-label">Accommodation</span>Grand Intercontinental Seoul COEX (continued)</div>
+        <div class="detail-item"><span class="detail-label">Food</span><b>Lunch:</b> COEX underground mall — naengmyeon (cold noodles) or bibimbap options.<br><b>Dinner:</b> COEX area or Apgujeong-dong.</div>
+      </div>
+
+      <div class="practical-box">
+        <h4><i class="fa-solid fa-circle-info"></i> Practical Tips</h4>
+        <ul>
+          <li><b>Naver Maps:</b> Essential for Seoul navigation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DAY 7 -->
+    <div class="day-card" id="day7">
+      <div class="day-header">
+        <span class="day-title">Day 7 — ICML Day 4 (Jul 9, Wed)</span>
+        <div class="day-meta">
+          <span class="meta-item"><i class="fa-solid fa-route"></i> Subway to Gangnam</span>
+          <span class="meta-item"><i class="fa-regular fa-clock"></i> Conference day</span>
+        </div>
+      </div>
+
+      <table class="timing-table">
+        <tr><th>Time</th><th>Duration</th><th>Activity</th></tr>
+        <tr><td>09:00–17:00</td><td>~8h</td><td><b>ICML Conference at COEX (코엑스 컨벤션센터)</b> — Technical sessions, posters, networking.</td></tr>
+        <tr><td>12:00–13:00</td><td>~1h</td><td><b>Lunch Break Escape: Bongeunsa Temple (봉은사)</b> — Across Yeongdong-daero from COEX, 5-min walk. The 23m standing Maitreya Buddha in stone, cedar forest path behind the main halls. Free entry.</td></tr>
+      </table>
+
+      <div class="details-grid">
+        <div class="detail-item"><span class="detail-label">Accommodation</span>Grand Intercontinental Seoul COEX (continued)</div>
+        <div class="detail-item"><span class="detail-label">Food</span><b>Lunch:</b> COEX underground mall — naengmyeon (cold noodles) or bibimbap options.<br><b>Dinner:</b> COEX area or Apgujeong-dong.</div>
+      </div>
+
+      <div class="practical-box">
+        <h4><i class="fa-solid fa-circle-info"></i> Practical Tips</h4>
+        <ul>
+          <li><b>Naver Maps:</b> Essential for Seoul navigation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DAY 8 -->
+    <div class="day-card" id="day8">
+      <div class="day-header">
+        <span class="day-title">Day 8 — ICML Final (Jul 10, Thu)</span>
+        <div class="day-meta">
+          <span class="meta-item"><i class="fa-solid fa-route"></i> Subway to Gangnam</span>
+          <span class="meta-item"><i class="fa-regular fa-clock"></i> Conference day</span>
+        </div>
+      </div>
+
+      <table class="timing-table">
+        <tr><th>Time</th><th>Duration</th><th>Activity</th></tr>
+        <tr><td>09:00–15:00</td><td>~6h</td><td><b>ICML Conference at COEX (코엑스 컨벤션센터)</b> — Final conference day. Wrap sessions, collect luggage — your COEX hotel can store bags while you finish.</td></tr>
+        <tr><td>15:00–15:30</td><td>~30 min</td><td><b>Starfield Library (스타필드 코엑스 아카이브)</b> — Inside COEX mall. The iconic multi-story bookshelf. Free, photogenic.</td></tr>
+        <tr><td>15:30–17:00</td><td>~1.5h</td><td><b>COEX Underground Mall.</b> Final food shopping and last-minute souvenir browsing. Connects directly to the subway — useful for quick lunch runs.</td></tr>
+        <tr><td>17:30</td><td>—</td><td><b>Dinner:</b> Upscale Korean in Apgujeong-dong or COEX area</td></tr>
+      </table>
+
+      <div class="details-grid">
+        <div class="detail-item"><span class="detail-label">Accommodation</span>Grand Intercontinental Seoul COEX (final night at COEX)</div>
+        <div class="detail-item"><span class="detail-label">Food</span><b>Lunch:</b> COEX underground mall.<br><b>Dinner:</b> Upscale Korean in Apgujeong-dong or COEX area.</div>
+      </div>
+
+      <div class="practical-box">
+        <h4><i class="fa-solid fa-circle-info"></i> Practical Tips</h4>
+        <ul>
+          <li><b>This is a lighter day — conference wraps early.</b> Use the afternoon for final sightseeing or shopping.</li>
+          <li><b>Luggage:</b> Your COEX hotel can store bags while you finish conference and explore.</li>
+          <li><b>COEX underground mall:</b> Connects directly to the subway — useful for quick lunch runs.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DAY 9 -->
+    <div class="day-card" id="day9">
+      <div class="day-header">
+        <span class="day-title">Day 9 — Seoul Recovery (Jul 11, Fri)</span>
+        <div class="day-meta">
+          <span class="meta-item"><i class="fa-solid fa-route"></i> Walking / Subway</span>
+          <span class="meta-item"><i class="fa-regular fa-clock"></i> Free day</span>
+        </div>
+      </div>
+
+      <table class="timing-table">
+        <tr><th>Time</th><th>Duration</th><th>Activity</th></tr>
+        <tr><td>Morning</td><td>—</td><td>Sleep in. Rest at the hotel. Enjoy COEX amenities or take a gentle walk around Gangnam.</td></tr>
+        <tr><td>Afternoon</td><td>~3h</td><td><b>Optional: Gangnam District Exploration.</b> Apgujeong-dong for high-end shopping, Cheongdam-dong for K-beauty stores and cafes. Or stay local — COEX has excellent dining and the Starfield Library is worth another visit.</td></tr>
+        <tr><td>Evening</td><td>~2h</td><td>Dinner in Gangnam area. Relax before the move north of the river tomorrow.</td></tr>
+      </table>
+
+      <div class="details-grid">
+        <div class="detail-item"><span class="detail-label">Accommodation</span>Grand Intercontinental Seoul COEX (continued)</div>
+        <div class="detail-item"><span class="detail-label">Food</span><b>Breakfast:</b> Hotel buffet or COEX dining.<br><b>Lunch:</b> COEX underground mall or Apgujeong-dong.<br><b>Dinner:</b> Upscale Korean in Gangnam area.</div>
+      </div>
+
+      <div class="practical-box">
+        <h4><i class="fa-solid fa-circle-info"></i> Practical Tips</h4>
+        <ul>
+          <li><b>This is a recovery day — no fixed schedule.</b> Use it to rest, explore Gangnam at your own pace, or prepare for the move north of the river tomorrow.</li>
+          <li><b>Check out of COEX on Jul 12 morning.</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DAY 10 -->
+    <div class="day-card" id="day10">
+      <div class="day-header">
+        <span class="day-title">Day 10 — Secret Garden & Gritty Alleys (Jul 12, Sat)</span>
+        <div class="day-meta">
+          <span class="meta-item"><i class="fa-solid fa-route"></i> Walking / Subway</span>
+          <span class="meta-item"><i class="fa-regular fa-clock"></i> Full day</span>
+        </div>
+      </div>
+
+      <table class="timing-table">
+        <tr><th>Time</th><th>Duration</th><th>Activity</th></tr>
+        <tr><td>10:00</td><td>—</td><td>Check out of Grand Intercontinental COEX. Take a taxi north of the Han River to your Jongno/Anguk hotel (~30 min). Drop bags.</td></tr>
+        <tr><td>12:30–15:00</td><td>~2.5h</td><td><b>Changdeokgung Palace (창덕궁) — Huwon (Secret Garden).</b> Guided tour of the Secret Garden. Requires ADVANCE BOOKING online at cdg.go.kr/english — strict daily cap of 100 visitors per time slot. The Secret Garden (Huwon) is a private royal retreat of pavilions and lotus ponds set in natural forest. Anguk Station, Line 3.</td></tr>
+        <tr><td>15:00–17:00</td><td>~2h</td><td><b>Ikseon-dong Hanok Village (익선동).</b> Narrow, zigzagging alleys filled with artisan shops. Stop at a teahouse and wander the converted hanok buildings.</td></tr>
+        <tr><td>18:30–21:00</td><td>~2.5h</td><td><b>Euljiro (을지로) — 'Hip-jiro.'</b> Chaotic alleyways outside the old printing shops. Cold draft beer, spicy pork (dwaeji bulgogi), and fried garlic chicken. Gritty, authentic Seoul nightlife.</td></tr>
+      </table>
+
+      <div class="details-grid">
+        <div class="detail-item"><span class="detail-label">Accommodation</span>Boutique Hotel / Hanok Guesthouse in Jongno or Anguk neighborhood (e.g., near Anguk Station, Line 3). Traditional Seoul experience.<br><a href='https://www.trip.com/' target='_blank'>Trip.com Booking</a></div>
+        <div class="detail-item"><span class="detail-label">Food</span><b>Lunch:</b> Light meal near Changdeokgung or Ikseon-dong.<br><b>Dinner:</b> Euljiro — cold draft beer, spicy pork (dwaeji bulgogi), and fried garlic chicken in the printing shop alleyways.</div>
+      </div>
+
+      <div class="practical-box">
+        <h4><i class="fa-solid fa-circle-info"></i> Practical Tips</h4>
+        <ul>
+          <li><b>BOOK Changdeokgung Secret Garden slots now — they release exactly 6 days in advance online and sell out instantly.</b></li>
+          <li><b>Taxi north of the river:</b> COEX to Jongno/Anguk ~30 min. Drop bags, then head to Changdeokgung.</li>
+          <li><b>Euljiro:</b> Line 2 to Euljiro 1-ga Station. The alleyways are behind the old printing shops — look for the narrow lanes with outdoor tables.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DAY 11 -->
+    <div class="day-card" id="day11">
+      <div class="day-header">
+        <span class="day-title">Day 11 — Premium Wagyu & The City Wall (Jul 13, Sun)</span>
+        <div class="day-meta">
+          <span class="meta-item"><i class="fa-solid fa-route"></i> Walking / Subway</span>
+          <span class="meta-item"><i class="fa-regular fa-clock"></i> Full day</span>
+        </div>
+      </div>
+
+      <table class="timing-table">
+        <tr><th>Time</th><th>Duration</th><th>Activity</th></tr>
+        <tr><td>Morning</td><td>~1h</td><td>Slightly slower morning. Coffee and pastry at a cafe around Anguk Station (e.g., Onion or Cafe Layered).</td></tr>
+        <tr><td>11:30–13:30</td><td>~2h</td><td><b>Majang Meat Market (마장도축시장).</b> Walk the ground-floor stalls, buy a beautiful cut of 1++ grade Hanwoo beef, and take it upstairs to a grill restaurant for a heavy, world-class lunch. This is where Seoul locals buy their premium beef.</td></tr>
+        <tr><td>15:30–18:30</td><td>~3h</td><td><b>Inwangsan City Wall (인왕산 성곽).</b> Begin the hike up from the base of Inwangsan as the sun begins to set. Reach the viewing points for perfect juxtaposition of the ancient stone fortress against the hyper-modern Seoul skyline. N Seoul Tower is visible from the wall — great photo opportunity.</td></tr>
+        <tr><td>19:30–21:30</td><td>~2h</td><td><b>Gwangjang Market (광장시장).</b> Sit at the center stalls for freshly fried mung bean pancakes (bindaetteok) and makgeolli. Netflix-featured stalls.</td></tr>
+      </table>
+
+      <div class="details-grid">
+        <div class="detail-item"><span class="detail-label">Accommodation</span>Boutique Hotel / Hanok Guesthouse in Jongno or Anguk neighborhood (final night)</div>
+        <div class="detail-item"><span class="detail-label">Food</span><b>Breakfast:</b> Coffee and pastry at a cafe around Anguk Station (e.g., Onion or Cafe Layered).<br><b>Lunch:</b> Majang Meat Market — 1++ grade Hanwoo beef, grilled at the restaurant upstairs.<br><b>Dinner:</b> Gwangjang Market — bindaetteok (mung bean pancakes) and makgeolli.</div>
+      </div>
+
+      <div class="practical-box">
+        <h4><i class="fa-solid fa-circle-info"></i> Practical Tips</h4>
+        <ul>
+          <li><b>Majang Meat Market:</b> Subway to Majang Station (Line 4). Allow 1.5–2 hours for the full experience.</li>
+          <li><b>Inwangsan City Wall:</b> Start hiking around 3:30–4:00 PM for sunset views. N Seoul Tower is visible from the wall — great photo opportunity.</li>
+          <li><b>Gwangjang Market:</b> 5-min walk from Jongno 5-ga Station (Lines 1, 3, 5). Arrive by 7:00 PM for the best atmosphere.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DAY 12 -->
+    <div class="day-card" id="day12">
+      <div class="day-header">
+        <span class="day-title">Day 12 — Departure (Jul 14, Mon)</span>
+        <div class="day-meta">
+          <span class="meta-item"><i class="fa-solid fa-route"></i> ~50km (AREX)</span>
+          <span class="meta-item"><i class="fa-regular fa-clock"></i> ~45 min transit</span>
+        </div>
+      </div>
+
+      <table class="timing-table">
+        <tr><th>Time</th><th>Duration</th><th>Activity</th></tr>
+        <tr><td>Morning</td><td>~1h</td><td><b>Cheonggyecheon Stream (청계천).</b> A final morning walk along the sunken stream, right in the heart of the city. Peaceful, green, and a unique urban oasis.</td></tr>
+        <tr><td>11:30</td><td>—</td><td>Check out of hotel. Head to Seoul Station.</td></tr>
+        <tr><td>12:30–13:15</td><td>~45 min</td><td><b>AREX Express Train Seoul Station → Incheon Airport (ICN).</b> Reserved seat recommended. ₩9,500.</td></tr>
+        <tr><td>13:15–16:45</td><td>~3.5h</td><td>Incheon Airport — clear security, explore the massive terminals, relax in the lounge. Singapore Airlines check-in opens at 13:45 (3 hours before your 16:45 flight).</td></tr>
+        <tr><td>16:45</td><td>—</td><td><b>Depart on SQ (return flight).</b></td></tr>
+      </table>
+
+      <div class="details-grid">
+        <div class="detail-item"><span class="detail-label">Food</span><b>Breakfast:</b> Coffee and pastry near your hotel or at Seoul Station.<br><b>Lunch:</b> Incheon Airport T1 departures hall — excellent food options, Korean and international.</div>
+      </div>
+
+      <div class="practical-box">
+        <h4><i class="fa-solid fa-circle-info"></i> Practical Tips</h4>
+        <ul>
+          <li><b>Cheonggyecheon Stream:</b> Runs from Seoul Station area eastward — easy walk from most Jongno hotels.</li>
+          <li><b>AREX Seoul → Incheon:</b> ~43 min. Reserved seat recommended.</li>
+          <li><b>Singapore Airlines check-in:</b> Opens 3 hours before departure (13:45 for your 16:45 flight). Incheon is large but efficient — allow 90 minutes from arrival to airside.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TRANSPORT & HOTELS -->
+    <div class="summary-card" id="transport">
+      <h2>Transport & Hotels Summary</h2>
+
+      <h3 style="margin-top: 20px;">Transport Details</h3>
+      <table class="timing-table">
+        <tr><th>Segment</th><th>Duration</th><th>Cost (KRW)</th><th>Notes</th></tr>
+        <tr><td>Incheon → Seoul</td><td>~43 min</td><td>₩9,500</td><td>AREX (Airport Railroad). Reserved seat recommended.</td></tr>
+        <tr><td>Seoul → Gyeongju</td><td>~2h15m</td><td>₩60,000–75,000</td><td>KTX high-speed rail. Book in advance via Korail.</td></tr>
+        <tr><td>Gyeongju → Busan</td><td>~30 min</td><td>₩18,000–25,000</td><td>KTX — one of the shortest intercity train journeys in Korea.</td></tr>
+        <tr><td>Busan → Seoul</td><td>~2h30m</td><td>₩65,000–80,000</td><td>SRT to Suseo Station (Gangnam). Book in advance via Korail.</td></tr>
+        <tr><td>Seoul → Incheon</td><td>~43 min</td><td>₩9,500</td><td>AREX (Airport Railroad). Reserved seat recommended.</td></tr>
+      </table>
+
+      <h3 style="margin-top: 20px;">Hotels</h3>
+      <table class="timing-table">
+        <tr><th>Nights</th><th>Location</th><th>Hotel</th><th>Why</th></tr>
+        <tr><td>Night 1</td><td>Gyeongju (central)</td><td>Gyeongju Hanok Guesthouse</td><td>Traditional hanok experience, walking distance to Daereungwon.</td></tr>
+        <tr><td>Night 2</td><td>Busan (Jungang Station)</td><td>Toyoko Inn Busan Jungang Station</td><td>Right on Line 1 subway. Walking distance to Jagalchi Market & BIFF Square.</td></tr>
+        <tr><td>Nights 3–8</td><td>Seoul (Gangnam/COEX)</td><td>Grand Intercontinental Seoul COEX</td><td>Right at the conference venue. Ultra-convenient for ICML days (Jul 5–12).</td></tr>
+        <tr><td>Nights 9–10</td><td>Seoul (Jongno/Anguk)</td><td>Boutique Hotel / Hanok Guesthouse</td><td>Traditional Seoul experience. Walking distance to Changdeokgung, Bukchon, Gwangjang Market.</td></tr>
+        <tr><td>Night 11</td><td>Incheon Airport area</td><td>N/A — AREX from Seoul Station, depart 16:45</td><td>No overnight needed. AREX at ~12:30 PM, arrive ICN by 1:15 PM.</td></tr>
+      </table>
+
+      <h3 style="margin-top: 20px;">Local Transport in Cities</h3>
+      <table class="timing-table">
+        <tr><th>City</th><th>Transport</th><th>Key Routes</th></tr>
+        <tr><td>Gyeongju</td><td>City bus + taxi</td><td>No subway. Bus 10/11 to Bulguksa, shuttle to Seokguram. Taxis are inexpensive.</td></tr>
+        <tr><td>Busan</td><td>Subway + bus</td><td>Line 1: Jagalchi/BIFF area. Express bus/subway to East Busan (~30 min).</td></tr>
+        <tr><td>Seoul</td><td>Subway + T-money card</td><td>Line 2 to COEX (Yeoksam). Line 3 to Anguk (Changdeokgung). Excellent coverage.</td></tr>
+      </table>
+    </div>
+
+    <!-- WHAT WE LEFT OUT -->
+    <div class="summary-card" id="removed">
+      <h2>What We Left Out (vs. Original v1)</h2>
+
+      <div class="history-box">
+        <i class="fa-solid fa-circle-xmark"></i> <b>Seoraksan Ridge Hike (Ulsanbawi + 808 stairs)</b><br>
+        <span style="font-size: 0.9rem;">Reason: Unsustainable in July heat for solo travel. Saved ~6 hours of intense hiking.<br>
+        Original: 808 iron stairs to Ulsanbawi summit + 6+ hours ridge trail. No shade, steep exposure.<br>
+        <b>Status:</b> N/A — Seoraksan/Sokcho completely removed from itinerary in favor of Seoul cultural exploration.</span>
+      </div>
+
+      <div class="history-box">
+        <i class="fa-solid fa-circle-xmark"></i> <b>Andong Hahoe Village</b><br>
+        <span style="font-size: 0.9rem;">Reason: Backtracking adds 3.5h transit for minimal unique value vs Gyeongju.<br>
+        Original: KTX Seoul → Andong (1h45m) + return (1h45m) = 3.5h round-trip transit for one day.<br>
+        <b>Status:</b> Eliminated from route. Gyeongju provides same UNESCO-level historical depth with zero backtracking.</span>
+      </div>
+
+      <div class="history-box">
+        <i class="fa-solid fa-circle-xmark"></i> <b>Naksansa Temple & Towangseong Falls</b><br>
+        <span style="font-size: 0.9rem;">Reason: Redundant with Seoraksan area; adds transit complexity.<br>
+        Original: Local bus #7 to Naksansa (30 min) + 1h round-trip hike to Towangseong Falls.<br>
+        <b>Status:</b> N/A — Naksansa Temple also removed. Seoul cultural exploration provides richer historical depth.</span>
+      </div>
+
+      <div class="history-box">
+        <i class="fa-solid fa-circle-xmark"></i> <b>Sokcho</b><br>
+        <span style="font-size: 0.9rem;">Reason: Long transit (4h each way) for minimal unique value vs Seoul cultural exploration. Better departure logistics staying in Seoul.<br>
+        Original: 2 nights in Sokcho + 1 transit day = ~8 hours total transit.<br>
+        <b>Status:</b> Eliminated. Replaced with 2 full days of Seoul cultural exploration (Changdeokgung Secret Garden, Majang wagyu, Inwangsan City Wall).</span>
+      </div>
+
+      <p style="margin-top: 20px;"><b>Total time saved:</b> ~17 hours (transit + hiking) compared to v1. These hours are redistributed into relaxed sightseeing, better food experiences (Majang wagyu, Euljiro nightlife), and less rushing between locations.</p>
+    </div>
+
+  </div>
+</div>
+
+<button class="fab" id="fabBtn"><i class="fa-solid fa-bars"></i></button>
+
+<script>
+  // Mobile menu toggle
+  const fabBtn = document.getElementById('fabBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const closeMenuBtn = document.getElementById('closeMenuBtn');
+  const mobileOverlay = document.getElementById('mobileOverlay');
+
+  fabBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('open');
+    mobileOverlay.style.display = 'block';
+  });
+
+  closeMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    mobileOverlay.style.display = 'none';
+  });
+
+  mobileOverlay.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    mobileOverlay.style.display = 'none';
+  });
+
+  // Active nav highlighting on scroll
+  const sections = document.querySelectorAll('.day-card, .summary-card');
+  const navLinks = document.querySelectorAll('#desktop-nav a, #mobile-nav a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 100) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+
+  // Print button (optional)
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key === 'p') {
+      window.print();
+    }
+  });
+</script>
+
+</body>
+</html>
